@@ -1,0 +1,214 @@
+kanban-card-viewer
+    & > .dimmer > .aModal
+        max-width unset
+        margin 3rem 5rem 2rem
+        @media (max-width 1280px)
+            margin 1rem 2.5rem
+    h1
+        margin 0 auto
+        font-weight 400
+        padding-bottom 1rem
+        @media (max-width 959px)
+            text-align center
+        
+    aside
+        width 6cm
+        flex 0 0 auto !important
+        padding-left 1.5rem
+        border-left 1px solid borders
+        margin-left 1.5rem
+        button
+            text-align left
+        .sticky
+            top 2.5rem
+        p > i
+            margin-right 0.5rem
+    .flatpickr-calendar.static.open
+        border-radius 0
+        box-shadow unset
+        margin 0
+    .te-toolbar-section
+        border-left onepx solid borders
+        if theme == 'Light'
+            border-bottom onepx solid borders
+    label-selector
+        margin-top 0.5rem
+    .labels
+        margin 1rem auto
+        max-width 19cm
+        & > .aLabel
+            border-width 2px
+            padding (0.5rem + onepx) (0.75rem - twopx)
+    @media (max-width 959px)
+        .aModal > .flexrow
+            flex-flow column nowrap
+        aside
+            width auto
+            margin 2rem 0 0
+            padding 0
+            border 0
+            button
+                text-align center
+        .aModal-aCloseButton, .aModal-anExpandButton, .aModal-aPresentButton
+            margin-left -1.8rem
+        .aCardContent
+            padding 0
+    @media (max-width 570px)
+        .editor-toolbar i.separator
+            display none
+    @media (max-width 512px)
+        .editor-toolbar
+            .icon-toolbartable
+                display none
+    .auto-height .tui-editor
+        max-height 30rem
+        overflow auto
+    .aModal.expanded
+        .auto-height .tui-editor
+            max-height unset
+.aCardContent
+    max-width 100%
+.aModal.expanded .aCardContent
+    max-width unset
+.anAttachment
+    border mix(bglight, borders, 50%) 2px solid
+    padding 0.25rem 3rem 0.5rem 4.5rem
+    margin 0 0 0 -0.5rem
+    border-radius 0.35rem 0.35rem 0 0
+    position relative
+    cursor pointer
+    .icon-x
+        position absolute
+        right 0.75rem
+        top 0.5rem
+        z-index 2
+        cursor pointer
+    i.big
+        position absolute
+        font-size 3rem
+        line-height 3rem
+        left 0.75rem
+        top 0.5rem
+        color cyan
+    h4
+        padding 0
+    .dim
+        font-size 0.725rem
+        opacity 0.35
+        line-height 1rem
+        display block
+        margin-top 0.5rem
+    & + .anAttachment
+        border-radius 0
+        border-top 0
+    &:last-child
+        border-radius 0 0 0.35rem 0.35rem
+    &:only-child
+        border-radius 0.35rem
+.anAttachment-aCopyButton
+    position absolute
+    right 0.75rem
+    bottom 0.35rem
+    color cyan
+    cursor copy
+    transition 1s linear color
+    &:active
+        color yellow
+        transition none
+
+.Attachments
+    margin-bottom 0.5rem
+
+.aToolbox.Specials
+    display flex
+    flex-flow row wrap
+    left 18.55rem
+    margin-top 2.5rem
+    transform translate(-50%, 0)
+    span
+       flex 1 1 12.5%
+       padding 0.2rem
+       box-sizing border-box
+       text-align center
+       cursor pointer
+       border-radius br
+       {trans}
+       &:hover
+            {bs}
+            background borders
+
+
+/* Showcasing */
+.aShowcaser
+    position fixed
+    left 0
+    right 0
+    top 0
+    bottom 0
+    overflow auto
+    overflow-y overlay
+    scroll-snap-type y
+    padding 8vh 12vh
+    background bgcolor
+    z-index 100500
+    &-Contents
+        font-size 6vh
+        line-height 1.35
+        h1
+            font-size 300%
+            line-height 100%
+            &:first-child
+                padding-top 0
+                margin-top 0
+        h2
+            font-size 250%
+            line-height 100%
+        h3
+            font-size 200%
+            line-height 133%
+        h4
+            font-size 150%
+            line-height 133%
+        h5, h6
+            font-size 100%
+            line-height 150%
+        h1, h2, h3, h4, h5, h6
+            padding 3vh 0
+        p, ul, ol, label, fieldset
+            padding 0.5em 0
+        ul, ol
+            padding-left 2em
+        hr
+            height 1em
+            margin 1em 0
+            &::before
+                font-size 3em
+        pre
+            overflow auto
+            max-height 90vh
+    .aModal-aCloseButton
+            right 1em
+            top 1em
+            position fixed
+            left unset
+            font-size 5vh
+        i
+            font-size 5vh
+.aShowcaser-Contents
+    .ql-video
+        margin 1rem -12vh
+        width 100vw
+        max-width none
+        height 100vh
+        scroll-snap-align center
+    hr + *
+        scroll-snap-align start
+    blockquote
+        max-width -webkit-fill-available
+        line-height 1.5
+        margin 1em 0
+        scroll-snap-align center
+        padding 1rem 0
+    .ql-align-center img:only-child
+        width 100%
+        scroll-snap-align center

@@ -1,0 +1,48 @@
+.aLabel
+    border-radius br
+    color white
+    padding 0.125rem 0.5rem
+    margin 0.5rem 0.5rem 0 0
+    display inline-block
+    line-height 1rem
+    border 2px solid
+    .option:first-child &
+        margin-top 0
+    .emoji
+        width 1.5rem
+        height 1.5rem
+        line-height 1.5rem
+        vertical-align -twopx
+    span
+        margin-left 0.5rem
+        vertical-align twopx
+        display inline-block
+label-selector
+    option:first-child
+        .aLabel
+            margin-top 0
+    & + button
+        margin-left 0.5rem
+    .select .aLabel
+        margin-top -0.25rem
+        margin-bottom -0.25rem
+.ticks
+    display flex
+    flex-flow row nowrap
+    justify-content space-between
+.aTick
+    background borders
+    width 1px
+    height 0.5rem
+    display block
+    position relative
+    margin-bottom 1rem
+    &:after
+        content attr(data-label)
+        display block
+        left 0
+        top 100%
+        margin-top 0.25rem
+        font-size 0.725rem
+        transform translate(-50%, 0)
+        opacity 0.35

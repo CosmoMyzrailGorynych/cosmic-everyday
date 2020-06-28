@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Cosmic Everyday is loading…</title>
+    </head>
+    <body>
+        <style>
+            html, body {
+                cursor: wait;
+                position: relative;
+                height: 100%;
+                margin: 0;
+            }
+            @font-face {
+                font-family: 'Open Sans';
+                src: url('/fonts/OpenSans-Light-webfont.woff') format('woff');
+                font-weight: 300;
+                font-style: normal;
+            }
+            body {
+                background: #231329;
+                pointer-events: none;
+                box-sizing: border-box;
+                border: 2px solid #472e51;
+            }
+            .cssload-container * {
+                box-sizing: border-box;
+            }
+            .cssload-container {
+                margin: 40px auto 0 auto;
+                max-width: 629px;
+            }
+
+            .cssload-container ul {
+                padding: 0;
+            }
+            .cssload-container ul li{
+                list-style: none;
+            }
+
+            .cssload-flex-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .cssload-flex-container li {
+                padding: 11px;
+                height: 113px;
+                width: 113px;
+                margin: 34px 23px;
+                position: relative;
+                text-align: center;
+            }
+
+            .cssload-loading, .cssload-loading:after, .cssload-loading:before {
+                display: inline-block;
+                position: relative;
+                width: 8px;
+                height: 56px;
+                background: #D6448D;
+                margin-top: 8px;
+                border-radius: 1125px;
+                animation: cssload-upDown2 1.15s ease infinite;
+                animation-direction: alternate;
+                animation-delay: -0.4s;
+            }
+            .cssload-loading:after {
+                background: #D5C856;
+            }
+            .cssload-loading:before {
+                background: #52BAD5;
+            }
+            .cssload-loading:after, .cssload-loading:before {
+                position: absolute;
+                content: '';
+                animation: cssload-upDown 1.15s ease infinite;
+                animation-direction: alternate;
+            }
+            .cssload-loading:before {
+                left: -18px;
+            }
+            .cssload-loading:after {
+                left: 18px;
+                animation-delay: -0.57s;
+            }
+
+
+
+
+            @keyframes cssload-upDown {
+                from {
+                    transform: translateY(23px);
+                }
+                to {
+                    transform: translateY(-23px);
+                }
+            }
+
+            @keyframes cssload-upDown2 {
+                from {
+                    transform: translateY(34px);
+                }
+                to {
+                    transform: translateY(-23px);
+                }
+            }
+            h1 {
+                position: absolute;
+                left: 0;
+                right: 0;
+                font: 32px Calibri, sans-serif;
+                font-weight: 400;
+                bottom: 0;
+                text-align: center;
+                color: #D5C856;
+            }
+        </style>
+        <div class="cssload-container">
+            <ul class="cssload-flex-container">
+                <li>
+                    <span class="cssload-loading"></span>
+                </li>
+            </div>
+        </div>
+
+        <h1>🌟 <i>Loading…</i></h1>
+    </body>
+</html>

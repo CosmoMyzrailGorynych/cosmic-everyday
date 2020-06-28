@@ -1,0 +1,54 @@
+/* Common stuff */
+.picker-wrapper, .slide-wrapper
+    position relative
+    float left
+
+.picker-indicator, .slide-indicator
+    position absolute
+    left 0
+    top 0
+    pointer-events none
+
+.picker, .slide
+    cursor crosshair
+    float left
+    border-radius br
+    svg
+        border-radius br
+
+/* Default skin */
+
+.cp-default
+    background-color bglight
+    border 1px solid borders
+    border-radius br
+    padding 0.5rem
+    float left
+    {bs}
+
+.cp-default .picker
+    width 15rem
+    height 15rem
+
+.cp-default .slide
+    width 1.5rem
+    height 15rem
+
+.cp-default .slide-wrapper
+    margin-left 1rem
+
+.cp-default .picker-indicator
+    width 0.5rem
+    height 0.5rem
+    border 2px solid borders
+    opacity .5
+    background-color white
+
+.cp-default .slide-indicator
+    width 100%
+    height 0.5rem
+    left -2px
+    opacity .6
+    border 2px solid borders
+    border-radius br
+    background-color white

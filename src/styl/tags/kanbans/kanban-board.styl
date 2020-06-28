@@ -1,0 +1,69 @@
+kanban-board, dock-board
+    @extends .aCard
+    display block
+    color white
+    margin 0 1.5rem 1.5rem 0
+    flex 0.5 1 15rem
+    cursor pointer
+    overflow hidden
+    box-sizing border-box
+    {trans}
+    .spacer
+        padding-bottom 130%
+    .bg
+        position absolute
+        left 0
+        top 0
+        border-radius br
+        background-size cover !important
+        background-position center center !important
+        width 100%
+        height 100%
+        transform-origin 50% 42%
+        transform scale(1)
+        transition ease transform 1s
+    &:hover
+        box-shadow 0 0.35rem 1.25rem -0.25rem rgba(magenta, 0.29), 0 0.15em 0.15rem rgba(0, 0, 0, 0.35)
+        border-color magenta
+        .bg
+            transform scale(1.05)
+    &.image
+        .bg:before
+            position absolute
+            content ""
+            left 0
+            bottom 0
+            right 0
+            top 0
+            border-radius 0.35rem
+            background rgba(0, 0, 0, 0.35)
+            if theme == 'Light'
+                background rgba(255, 255, 255, 0.15)
+            opacity 1
+            transition 1s ease opacity
+        &:hover
+            .bg:before
+                opacity 0
+    h3
+        color white
+        position absolute
+        top 41%
+        left 0
+        width 100%
+        text-align center
+        padding 0 2rem
+        box-sizing border-box
+        transform translate(0, -50%)
+        font-size 2rem
+        font-style italic
+        overflow hidden
+        text-overflow ellipsis
+        line-height 3rem
+        text-shadow 0 0.1em 0.1em rgba(0, 0, 0, 0.35), 0 0 0.3em rgba(0, 0, 0, 0.25), 0 0 0.5em black, 0 0 1em black
+.aBoardPin
+    .emoji
+        width 2rem
+        height 2rem
+    position absolute
+    top 1rem
+    right 1rem

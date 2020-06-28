@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title Cosmic Everyday
+        link(href="/node_modules/quill/dist/quill.core.css" rel="stylesheet")
+        // link(href="/node_modules/quill/dist/quill.snow.css" rel="stylesheet")
+        link#themeCSS(href='./data/themeCosmic.css' rel='stylesheet')
+        script(type="text/javascript").
+            localStorage.UITheme = localStorage.UITheme || 'Cosmic';
+            var theme = localStorage.UITheme;
+
+            document.getElementById('themeCSS').href = `./data/theme${theme}.css`;
+    body
+        tab-switcher
+        // update-menu
+        script(src="/data/bundle.js")
+        script(src="/node_modules/quill/dist/quill.min.js")
+        // script(src="/node_modules/quill-markdown-shortcuts/dist/markdownShortcuts.js")
+        script.
+            window.signals = {};
+            riot.observable(window.signals);
+            riot.mount('*');
+            var gui = require('nw.gui');
+            onload = function() {
+                if (!localStorage.ifLaunchMinimised) {
+                    gui.Window.get().show();
+                }
+            };
+            localStorage.UIFont = localStorage.UIFont || 'lato';
+            var font = localStorage.UIFont;
+            document.body.classList.add(font);

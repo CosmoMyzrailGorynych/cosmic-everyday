@@ -1,0 +1,113 @@
+calendar-panel
+    .flatpickr-calendar.inline
+        height 100%
+        font-size 1.5rem
+        padding 1.5rem 2rem
+        @media (max-width 1400px), (max-height 850px)
+            font-size 1rem
+            padding 0
+        font-weight 300
+        max-height none
+        background none
+        border 0
+        display flex
+        flex-flow column nowrap
+        box-shadow none
+    .flatpickr-month
+        flex 0 0 auto
+    .flatpickr-prev-month, .flatpickr-next-month
+        svg
+            width 1.5rem
+    .flatpickr-innerContainer
+        flex 1 1 auto
+        display flex
+        flex-flow row nowrap
+    .flatpickr-weekwrapper
+        flex 0 0 auto
+        display flex
+        flex-flow column nowrap
+    .flatpickr-weekdays
+        flex 0 0 auto
+        min-height 1.5rem
+    .flatpickr-weekday
+        padding 1.5rem 0
+        @media (max-width 1400px), (max-height 850px)
+            padding 0
+    .flatpickr-rContainer
+        flex 1 1 auto
+        display flex
+        flex-flow column nowrap
+    .flatpickr-day
+        box-sizing border-box
+        margin 0.25rem 0
+        flex 1 1 auto
+        height 9rem
+        max-height 9rem
+        @media (max-height 960px)
+            height 8rem
+            max-height 8rem
+        @media (max-height 850px)
+            height 7rem
+            max-height 7rem
+        @media (max-height 760px)
+            height 6rem
+            max-height 6rem
+    .flatpickr-days
+        display flex
+        flex-flow row wrap
+        flex 1 1 auto
+        line-height 1.5rem
+        align-content flex-start
+        .flatpickr-day
+            position relative
+            margin 0
+            padding 0.75rem 1rem
+            @media (max-height 960px)
+                padding 0.5rem 1rem
+            box-sizing border-box
+            outline onepx bglight solid
+            border-radius 0
+            text-align right
+            max-width none
+            flex 1 1 ((100% - 7 * 1) / 7)
+            {trans}
+            &.today, &:hover
+                z-index 2
+    .flatpickr-weekwrapper .flatpickr-weeks
+        border-right 0
+.calendarCards
+    position relative
+    max-height 8rem
+    margin -2rem -1rem 0 0
+    padding-right 1rem
+    overflow overlay
+    background rgba(bgcolor, 0.35)
+.aCalendarCard
+    font-size 0.875rem
+    line-height 1.5rem
+    text-align left
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+    @media (max-height 850px)
+        line-height 1.25rem
+    &:before
+        content '\e947'
+        color ctext
+        opacity 0.65
+        font-size 16px
+        font-family icomoon
+        margin-right 0.35rem
+    &.outdated:before
+        opacity 0.35
+    &.done:before
+        opacity 1
+        content '\e948'
+        color green
+    &.undone:before
+        opacity 1
+        content '\e91e'
+        color orange
+    &.outdated.undone:before
+        opacity 1
+        color red

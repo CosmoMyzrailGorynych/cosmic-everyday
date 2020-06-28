@@ -1,0 +1,23 @@
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.7.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2018 Daniel Eden
+ */
+
+@keyframes zoomInUp
+    from
+        opacity 0
+        transform scale3d(0.1, 0.1, 0.1) translate3d(0, 3rem, 0)
+    30%
+        opacity 1
+        transform scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0)
+.animated
+    animation-duration 0.5s
+    animation-fill-mode both
+
+for i in zoomInUp
+    .{i}
+        @extends .animated
+        animation-name i

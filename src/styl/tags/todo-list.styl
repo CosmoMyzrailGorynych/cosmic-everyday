@@ -1,0 +1,40 @@
+todo-list
+    display block
+.aToDoList
+    margin-bottom 0.5rem
+.aToDo
+    display flex
+    flex-flow row nowrap
+    align-items baseline
+    margin-bottom 1rem
+    i
+        cursor pointer
+        opacity 0.35
+        align-self flex-start
+        {trans}
+    .icon-delete
+        opacity 0
+    &:hover
+        .icon-delete
+            opacity 1
+    .icon-move
+        padding 0 0.25rem
+        position relative
+        left -0.25rem
+    textarea
+        margin 0 1em 0 0.75rem
+        min-height 1.5rem
+        height 1.5rem
+        resize none
+        transition none
+        &:hover
+            background rgba(white, 0.35 * 0.35)
+            &.done
+                background rgba(white, 0.35)
+        &.done
+            opacity 0.35
+            font-style italic
+            text-decoration line-through
+    label
+        margin 0
+        padding 0

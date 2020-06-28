@@ -1,0 +1,46 @@
+.aSwatch, .aBackgroundSwatch
+    {bs}
+    display inline-block
+    border-radius br
+    cursor pointer
+    position relative
+    &:before
+        display block
+        @extends .icon-check:before
+        opacity 0
+        font-family icomoon
+        font-size 0
+        color white
+        transform translate(-50%, -50%)
+        text-shadow 0 0.1em rgba(black, 0.2)
+        transition 0.25s ease-drift all
+        position absolute
+        left 50%
+        top 50%
+    &.active
+        &:before
+            opacity 1
+            font-size 24px
+            transform translate(-50%, -50%)
+.aBackgroundSwatch.active:before
+    font-size 48px
+.aSwatch
+    width 1.5rem
+    height 1.5rem
+    border 2px solid white
+    box-sizing border-box
+    margin 0.5rem 0.5rem 0 0
+    kanban-config &, jumble-config &
+        width 2.5rem
+        height 2.5rem
+
+.aBackgroundSwatch
+    width 16rem
+    height 9rem
+    margin 1rem 1rem 0 0
+    background-size cover !important
+    background-position center center !important
+
+.backgroundSwatches
+    max-height 21rem
+    overflow-y overlay

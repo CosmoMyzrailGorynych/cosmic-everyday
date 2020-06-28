@@ -1,0 +1,46 @@
+.cyan
+    color cyan
+.magenta
+    color magenta
+.yellow
+    color yellow
+
+bs =
+    box-shadow 0 0.15em 0 rgba(0, 0, 0, 0.27)
+bbs =
+    box-shadow 0 0.15rem 1rem rgba(0, 0, 0, 0.35), 0 2.3rem 4rem -2rem rgba(magenta, 0.18)
+trans =
+    transition 0.25s ease all
+magic =
+    background linear-gradient(135deg, cyan 0%, magenta 50%, yellow 100%)
+    -webkit-background-clip text
+    -webkit-text-fill-color transparent
+br = 0.35rem
+bline = 0.115rem
+onepx = 1rem / fsize
+twopx = 2rem / fsize
+ease-drift = cubic-bezier(0.1, 1.43, 0.5, 1)
+
+body
+    cursor default
+a, button, .a, .button
+    cursor pointer
+
+@require 'hvost.styl'
+
+@require './../../app/data/fonts/icomoon.styl'
+@require './../../app/data/fonts/Lato.styl'
+@require './../../app/data/fonts/Merriweather.styl'
+@require './../../app/data/fonts/OpenDyslexic.styl'
+
+@require 'typography.styl'
+
+@require 'buildingBlocks.styl'
+@require 'inputs.styl'
+
+@require 'labels.styl'
+@require 'swatches.styl'
+
+@require '3rdparty/**/*.styl'
+
+@require './tags/**/*.styl'

@@ -1,0 +1,47 @@
+track-panel
+    position fixed
+    bottom 1rem
+    right 1rem
+    display block
+    border-radius 100rem
+    @extends .aCard
+    margin 0
+    padding 0
+    overflow hidden
+    line-height 0
+    z-index 51
+    {trans}
+    &:hover
+        padding-left 8rem
+    svg
+        circle
+            stroke-width 4px
+            stroke rgba(ctext, 0.17)
+        #bar
+            stroke magenta
+        transform rotate(-90deg)
+    h1
+        position absolute
+        right 0
+        width 4rem
+        text-align center
+        line-height 1.5rem
+        font-size 1.5rem
+        top 2rem
+        transform translate(0, -50%)
+        padding 0
+        margin 0
+        white-space pre
+    .&-aPlayButton, .&-aStopButton, .&-aCardButton
+        @extends a
+        position absolute
+        top 2rem
+        transform translate(-50%, -50%)
+        right 4rem
+        i
+            font-size 1.5rem
+            line-height 2rem
+    .&-aPlayButton
+        right 6rem
+    .&-aStopButton
+        right 8rem

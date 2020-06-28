@@ -1,0 +1,145 @@
+.ql-editor, .ql-container
+    font inherit
+    font-size 1.25rem
+    line-height 2rem
+
+.ql-editor
+    padding 1rem 0
+    p, ol, pre, blockquote, h1, h2, h3, h4, h5, h6, ul, pre
+        margin 0.5rem auto 1rem
+        max-width 19cm
+    h2, h3
+        font-weight 400
+    pre
+        margin 1.5rem auto
+        overflow auto
+        if (theme == "Light")
+            background #333
+            color #ccc
+            padding 1rem 2rem
+            border-radius br
+
+.ql-container.ql-snow
+    border 0
+
+.ql-toolbar.ql-snow
+    text-align center
+    border 0
+
+.ql-snow.ql-toolbar
+    position sticky
+    top 1rem
+    background bglight
+    z-index 2
+    box-shadow 0 0.5rem 1rem bglight
+    font inherit
+    .ql-snow .ql-picker-label
+        padding 0.15rem 1.25rem 0.15rem 0.5rem
+    button, .ql-picker, .ql-icon-picker
+        @extends button
+        width auto
+        height auto
+        padding 0.5rem
+        margin 0
+        border 0
+        background 0
+        svg
+            display none
+        .ql-stroke
+            stroke cyan
+        .ql-fill, .ql-stroke.ql-fill
+            fill cyan
+        &:hover, &.ql-active
+            .ql-stroke
+                stroke white
+            .ql-fill, .ql-stroke.ql-fill
+                fill white
+    .ql-picker.ql-expanded .ql-picker-options
+        position absolute
+    .ql-picker.ql-expanded .ql-picker-label
+        border 0
+.ql-snow .ql-tooltip
+    background-color bglight
+    border onepx solid borders
+    box-shadow 0
+    {bs}
+    color ctext
+    padding 0.5rem 1rem
+    white-space nowrap
+    border-radius br
+.ql-formats
+    & + .ql-formats
+        margin-left 1.5rem
+    button, .ql-picker, .ql-icon-picker
+        &:before
+            font-family icomoon
+            font-size 1.5rem
+            @media (max-width 1023px)
+                font-size 1.25rem
+.ql-toolbar
+    .ql-bold:before
+        @extends .icon-bold:before
+    .ql-italic:before
+        @extends .icon-italic:before
+    .ql-underline:before
+        @extends .icon-underline:before
+    .ql-strike:before
+        @extends .icon-stroke:before
+
+    .ql-align
+        &:before
+            @extends .icon-align-left:before
+            font-family icomoon
+        .ql-picker-label
+            display none
+        .ql-picker-item
+            &:before
+                @extends .icon-align-left:before
+                font-family icomoon
+                font-size 1.5rem
+            &[data-value="center"]:before
+                @extends .icon-align-center:before
+            &[data-value="right"]:before
+                @extends .icon-align-right:before
+            &[data-value="justify"]:before
+                @extends .icon-align-justify:before
+    .ql-picker-item
+        @extends button
+        border 0
+        background transparent
+        margin 0
+    .ql-align .ql-picker-item
+        display inline-block
+        & + .ql-picker-item
+            margin-left 0.5rem
+
+    .ql-blockquote:before
+        @extends .icon-blockquote:before
+    .ql-list:before
+        @extends .icon-list:before
+    .ql-list[value="ordered"]:before
+        @extends .icon-ol:before
+    .ql-link:before
+        @extends .icon-link-2:before
+    .ql-image:before
+        @extends .icon-image:before
+    .ql-video:before
+        @extends .icon-film:before
+    .ql-table:before
+        @extends .icon-layout:before
+    .ql-formula:before
+        @extends .icon-formula:before
+    .ql-script:before
+        @extends .icon-superscript:before
+    .ql-script[value="sub"]:before
+        @extends .icon-subscript:before
+    .ql-code-block:before
+        @extends .icon-code:before
+    .ql-clean:before
+        @extends .icon-unformat:before
+    .ql-header
+        font-weight 800 !important
+        padding 0.75rem !important
+    .ql-hr:before
+        @extends .icon-more-horizontal:before
+        

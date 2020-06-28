@@ -1,0 +1,73 @@
+kanban-card
+    @extends .aCard
+    cursor pointer
+    background-color rgba(bglight, 0.9)
+    .aLabel
+        background transparent !important
+        padding 0
+        margin 0.5rem 0.5rem 0 0
+        display inline-block
+        line-height 1rem
+        border 0
+        vertical-align -6px
+        position relative
+        width 1.5rem
+        height 1.5rem
+    p
+        padding 0
+    .aCardExtras
+        line-height 1
+    .icon-calendar, .icon-file-text, .icon-file-text, .icon-paperclip, .icon-clock
+        margin-top 0.5rem
+        display inline-block
+    .icon-file-text
+        margin-right 0.5rem
+    .icon-file-text, .icon-paperclip, .icon-clock
+        opacity 0.35
+        vertical-align -3px
+    .icon-paperclip, .icon-clock, .icon-calendar
+        & + em
+            opacity 0.65
+        & + em, & + span
+            margin-right 0.65em
+            margin-left 0.35rem
+            vertical-align 1px
+    {trans}
+    &:hover
+        box-shadow 0 0.35rem 1.25rem -0.25rem rgba(magenta, 0.29), 0 0.15em 0.15rem rgba(0, 0, 0, 0.35)
+        border-color magenta
+
+.anAttachedImage
+    line-height 0
+    border-radius br
+    overflow hidden
+    margin -0.675rem -1rem 0.5rem
+    position relative
+    max-height 28.5rem // ~~ соотношение листов А4
+    cursor zoom-in
+    img
+        width 100%
+    &.gif
+        .gif + img
+            display none
+        &:hover
+            .gif
+                display none
+            .gif + img
+                display initial
+
+
+.aCardProgress
+    display flex
+    flex-flow row wrap
+    align-items center
+    padding-top 0.5rem
+    i
+        color green
+        position relative
+        margin-right 1rem
+    i, em
+        flex 0 0 auto
+    .aProgressBar
+        flex 1 1 auto
+        margin-right 1rem

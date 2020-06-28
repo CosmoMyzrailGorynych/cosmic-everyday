@@ -1,0 +1,35 @@
+{
+  "name": "CosmicEveryday",
+  "description": "An organizer with superpowers",
+  "main": "startup.js",
+  "version": "1.0.0-alpha",
+  "manifestUrl": "https://s3-us-west-2.amazonaws.com/cosmicreleases/0/package.json",
+  "changelogUrl": "https://s3-us-west-2.amazonaws.com/cosmicreleases/0/CHANGELOG.md",
+  "window": {
+    "title": "Cosmic Everyday",
+    "fullscreen": false,
+    "frame": false,
+    "show": false,
+    "icon": "data/CosmicEveryday.png",
+    "min_width": 480
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "flatpickr": "2.2.4",
+    "fs-extra": "^7.0.1",
+    "markdown-it": "^8.4.2",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.2.2",
+    "node-schedule": "^1.3.2",
+    "quill": "^1.3.6",
+    "quill-markdown-shortcuts": "0.0.6",
+    "split": "^1.0.1"
+  },
+  "scripts": {
+    "dist": "build --tasks win-x86,win-x64,linux-x86,linux-x64,mac-x64 --mirror https://dl.nwjs.io/ .",
+    "distLinux64": "build --tasks linux-x64 --mirror https://dl.nwjs.io/ .",
+    "distWindows64": "build --tasks win-x64 --mirror https://dl.nwjs.io/ .",
+    "start": "run --x86 --mirror https://dl.nwjs.io/ ."
+  },
+  "stylintrc": ".stylintrc"
+}

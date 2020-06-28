@@ -1,0 +1,40 @@
+tab-switcher
+    position fixed
+    left 0
+    right 0
+    top 0
+    bottom 0
+    & > .navTabs
+        z-index 10
+
+.aHomePanel
+    display flex
+    width 100%
+    flex-flow row wrap
+    padding 1.5rem 2rem
+    @media (max-width 600px)
+        padding 1.5rem 1rem
+    box-sizing border-box
+    & > *
+        padding 0 1rem 1rem
+calendar-homepage
+    flex 1 1 15rem
+    h1
+        line-height 2rem
+kanban-homepage, docks-homepage
+    &, [data-is="&"]
+        display block
+        flex 2 0 30rem
+        overflow-x hidden
+        max-width 100%
+        box-sizing border-box
+        .boards
+            display flex
+            flex-flow row wrap
+            margin-right -1.5rem
+#theLifehack
+    padding 1.5rem 1.5rem 0
+    font-size 1.25rem
+    opacity 0.35
+    text-align center
+    flex 1 1 100%

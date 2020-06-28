@@ -1,0 +1,36 @@
+{
+  "src_folders" : ["tests"],
+  "output_folder" : "reports",
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./bin/selenium-server-standalone-3.5.0.jar",
+    "log_path" : "",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "./chromedriver"
+    }
+  },
+
+  "test_settings": {
+    "default": {
+      "launch_url" : "http://localhost:3030",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "chromeOptions": {
+          "args" : ["nwapp=./app", "--no-naughty-popups"]
+        }
+      },
+      "screenshots": {
+        "enabled": true,
+        "on_failure": true,
+        "on_error": false,
+        "path": "./error_screenshots"
+      }
+    }
+  }
+}

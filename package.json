@@ -1,0 +1,29 @@
+{
+  "name": "CosmicEverydayBuildEnvironment",
+  "main": "gulpfile.js",
+  "version": "0.0.0",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "fs-extra": "^7.0.1",
+    "get-gulp-args": "0.0.1",
+    "gulp": "^4.0.1",
+    "gulp-append-prepend": "^1.0.8",
+    "gulp-closure-compiler": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-optimize-js": "^1.1.0",
+    "gulp-pug": "^4.0.0",
+    "gulp-riot": "^1.1.5",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify-es": "^0.1.11",
+    "inquirer": "^3.3.0",
+    "makensis": "^0.9.1",
+    "nightwatch": "^0.9.21",
+    "node-notifier": "^4.6.1",
+    "nw-builder": "^3.5.7",
+    "run-sequence": "^1.2.2",
+    "streamqueue": "^1.1.2"
+  },
+  "stylintrc": ".stylintrc"
+}

@@ -1,0 +1,298 @@
+/**********************************/
+/********** BASIC LAYOUT **********/
+/**********************************/
+
+.responsive .inner_column {
+    max-width: initial;
+}
+.responsive .wrapper {
+    padding: 0;
+}
+.columns {
+    margin: 1.5rem 0 0 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    max-width: 100vw;
+}
+.columns .left_col {
+    -webkit-order: 2;
+    order: 2;
+}
+.columns .right_col {
+    -webkit-order: 1;
+    order: 1;
+}
+.columns .right_col, .columns .left_col {
+    display: block;
+    margin: 0;
+    width: auto;
+}
+.view_game_page.buy_on_top .header_buy_row, #download, .buy_row, .uploads > p, .view_game_page .more_information_toggle .toggle_row {
+    text-align: center;
+}
+#view_game_footer {
+   padding: 1.25rem 1.5rem;
+   margin: 0 auto;
+}
+.header {
+  background: #0f0e1d;
+}
+.right_col.column,
+.formatted_description.user_formatted,
+#devlog,
+.view_game_page .uploads .upload_list_widget,
+.game_community_preview_widget .community_topics,
+.game_community_preview_widget .post_links,
+.inner_column .footer,
+.view_game_page .info_panel_wrapper {
+    width: 960px;
+    max-width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+.uploads, .view_game_page #download + .buy_row, #download, .community_summary {
+  background: #0f0e1d;
+  padding: 1rem 0;
+  margin: 0;
+}
+#download, .community_summary {
+    border-top: 1px solid #472e51;
+}
+.community_summary, .uploads, #header {
+    border-bottom: 1px solid #472e51;
+}
+
+/**********************************/
+/********* TEXT & HEADERS *********/
+/**********************************/
+
+.formatted_description.user_formatted p:first-child {
+    margin-top: 1rem;
+    font-size: 125%;
+}
+.formatted_description.user_formatted p:first-child::after {
+    content: '';
+    display: block;
+    height: 0.2rem;
+    width: 10.25ch;
+    margin-top: 0.5rem;
+    background: #472e51;
+    border-radius: 1rem;
+}
+.inner_column p, .inner_column ul, .inner_column ol, .inner_column blockquote {
+    line-height: 1.65;
+}
+.inner_column li+li {
+    margin-top: 0.5rem
+}
+.inner_column blockquote {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: oblique;
+}
+a {
+    color: #52BAD5;
+    text-decoration: none;
+    transition: 0.25s ease all;
+}
+a:hover {
+    color: #D6448D;
+}
+a:active {
+    color: #D5C856;
+    transition: none;
+}
+.inner_column h1, .inner_column h2, .inner_column h3, .inner_column h4  {
+   font-weight: 200;
+   padding-bottom: 0;
+   margin-bottom: 1rem;
+   margin-top: 1.5em;
+   color: #52BAD5;
+   font-weight: 300;
+}
+.inner_column h2 {
+   font-size: 3rem;
+   text-align: center;
+   margin-top: 2rem;
+}
+.inner_column h3 {
+   font-size: 2rem;
+}
+.inner_column h4 {
+   font-weight: 600;
+}
+.formatted_description.user_formatted table, .formatted_description.user_formatted td  {
+    border: 0;
+}
+.formatted_description.user_formatted strong {
+    font-weight: 700;
+    color: #fff;
+}
+#download {
+    padding: 2rem 0 0;
+}
+
+/**********************************/
+/********** SCREENSHOTS ***********/
+/**********************************/
+
+.view_game_page .screenshot_list {
+    white-space: initial;
+    text-overflow: ellipsis;
+    overflow: auto;
+    font-size: 0;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.custom-anOutlinedImage {
+    box-sizing: border-box;
+}
+.view_game_page .screenshot_list img, .custom-anOutlinedImage {
+   border-radius: 0.35rem;
+   border: 0.15rem white solid !important;
+   box-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.35), 0 2.3rem 4rem -2rem rgba(175, 1, 88, 0.18);
+   transition: 0.35s ease all;
+   display: inline-block;
+   margin: 0;
+   transform: scale(0.95);
+}
+.view_game_page .screenshot_list img {
+    height: 160px;
+    max-width: initial;
+    transform: scale(0.9);
+}
+.screenshot_list a:hover img, .custom-anOutlinedImage:hover {
+    opacity: 1;
+    transform: scale(1);
+    transform: scale(1.025);
+}
+
+/**********************************/
+/********* DOWNLOAD & BUY *********/
+/**********************************/
+
+.buy_row .buy_message .sub::before {
+    content: "$0+";
+    margin-right: 0.35rem;
+    font-size: 1.35rem;
+    vertical-align: -1px;
+}
+.view_game_page .buy_row .button_message {
+    flex-flow: column nowrap;
+}
+.view_game_page .buy_row .sub {
+    margin-top: 1rem;
+}
+.view_game_page .buy_row .button {
+    margin-right: 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    height: auto;
+    font-weight: 500;
+    padding: 0 1rem;
+    border-radius: 0.35rem;
+}
+
+/**********************************/
+/************ UPLOADS *************/
+/**********************************/
+
+.view_game_page #download + .buy_row {
+    padding-bottom: 0;
+}
+.view_game_page .uploads .upload_list_widget {
+    columns: 2;
+    max-width: 100%;
+}
+@media (max-width: 650px) {
+    .view_game_page .uploads .upload_list_widget {
+        columns: 1;
+    }
+}
+.upload_list_widget .upload .upload_name .name {
+    display: block;
+    line-height: 2;
+}
+.upload_list_widget .upload .upload_name, .upload_list_widget .upload .build_row {
+    display: inline;
+}
+.upload_list_widget .upload .upload_name > * {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+.upload_list_widget .upload .info_column {
+    background: #231329;
+    border: 1px solid #472e51;
+    padding: 0.5rem 1.5rem 0.75rem;
+    border-radius: 0.35rem;
+    text-align: initial;
+}
+.view_game_page .uploads .upload_list_widget {
+    padding-bottom: 1.5rem
+}
+
+
+/**********************************/
+/************ DEVLOG **************/
+/**********************************/
+
+#devlog {
+    padding: 0 1.5rem 1rem;
+}
+.view_game_page .game_devlog ul li {
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: first baseline;
+    margin: 0;
+    border-bottom: 1px solid #472e51;
+}
+.view_game_page .game_devlog ul li:last-child {
+    border-bottom: 0;
+}
+/**********************************/
+/************* FORUM **************/
+/**********************************/
+
+.game_community_preview_widget .community_topics, .game_community_preview_widget .community_topics a {
+  color: #fff;
+  text-decoration: none;
+}
+.game_community_preview_widget .community_topic_row .topic_tag {
+  background: #52BAD5;
+  font-weight: 400;
+  font-size: 75%;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.35rem;
+}
+.game_community_preview_widget .post_links {
+  margin: 1rem auto;
+}
+.game_community_preview_widget .community_topic_row {
+    padding: 0.25rem 1rem;
+    border-radius: 0.35rem;
+    margin: 0 -1rem 0.75rem;
+}
+
+
+/**********************************/
+/********* CUSTOM STUFF ***********/
+/**********************************/
+
+.custom-anIconCell {
+  width: 7rem;
+  text-align: center;
+}
+.custom-aBareTable {
+  border: 0 !important;
+  margin: 1em -1em !important;
+}
+.custom-aBareTable td {
+  line-height: 1.5;
+  border: 0 !important;
+}

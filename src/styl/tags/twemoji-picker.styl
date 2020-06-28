@@ -1,0 +1,42 @@
+twemoji-picker
+    position relative
+    display block
+    .select
+        width 6rem
+        line-height 0
+        twemoji-icon
+            margin 0 0.35rem
+        .emoji
+            width 2rem
+            height @width
+    .options 
+        max-width 300%
+        width 20rem
+    ul
+        list-style none
+        display flex
+        flex-flow row nowrap
+        padding 0
+        border 2px solid borders
+        border-left 0
+        border-right 0
+        margin 1rem -1rem 0.5rem
+    li
+        flex 1 1 1rem
+        padding 0.5rem 0
+        line-height 0
+        cursor pointer
+        text-align center
+        {trans}
+        &.active
+            background borders
+        &:hover
+            background borders
+    twemoji-icon
+        margin 0.25rem
+        display inline-block
+        cursor pointer
+        border-radius br
+    .&-aScroller
+        max-height 15rem
+        overflow auto

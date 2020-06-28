@@ -1,0 +1,90 @@
+strong, b
+    font-weight 600
+
+a, .a
+    color cyan
+    text-decoration none
+    {trans}
+    &:hover
+        color magenta
+    &:active
+        color yellow
+        transition none
+.header
+    font-weight 300
+    body.merriweather &, body.opendyslexic &
+        font-weight 600
+    color cyan
+    padding 1.5rem 0
+    margin 0
+    line-height 1.5rem
+    position relative
+    &:first-child
+        padding-top 0
+for i in 1 2 3 4 5 6
+    h{i}, .h{i}, .cm-header-{i}
+        @extends .header
+        font-size max(1rem, 2rem - ((-1em + i) * 0.3333333))
+        // line-height ceil(2rem - ((-1em + i) * 0.3333333)) * 1.5
+        // padding-top (1rem + bline)
+        // padding-bottom (0.5rem - bline)
+        top bline * (-4 + i) + 0.5rem
+    .cm-header-{i}
+        padding 0
+h1
+    line-height 2.5rem
+h4, h5, h6,
+.h4, .h5, .h6
+    font-weight 600
+p, ul, ol, label, fieldset
+    display block
+    margin 0
+    padding 0.5rem 0 1rem
+ul, ol
+    padding-left 3rem
+
+button, input, select, textarea
+    font inherit
+    vertical-align baseline
+
+i[class^="icon-"], i[class*=" icon-"]
+    font-size 24px
+    line-height 1.5rem
+    vertical-align baseline
+i[class^="icon-label-"], i[class*=" icon-label-"]
+    font-size 16px
+
+fieldset
+    border 0
+
+dl
+    clear both
+    margin 0
+    padding 0.5rem 0 1rem
+    dt
+        font-weight 600
+        width 9rem
+        float left
+    dd
+        margin-left 10rem
+        
+.dim
+    opacity 0.35
+
+hr
+    border 0
+    background mix(bgcolor, borders, 50%)
+    border-radius 1rem
+    height twopx
+    margin 0 (0.75rem - onepx)
+b
+    font-weight 600
+
+table, .ql-editor table
+    border 1px solid rgba(cyan, 0.2)
+    border-spacing 0
+    td, th
+        border 1px solid rgba(cyan, 0.2)
+        padding 0.5rem
+    tr:nth-child(2n) td, th
+        background rgba(cyan, 0.1)

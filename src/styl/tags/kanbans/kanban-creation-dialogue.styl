@@ -1,0 +1,39 @@
+kanban-creation-dialogue
+    display block
+    .flexrow
+        position absolute
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
+        border-radius 1rem
+        background bglight
+        border 1px solid borders
+        {bbs}
+        label
+            padding 2rem
+            width 10rem
+            cursor pointer
+            {trans}
+            & + label
+                border-left 1px solid borders
+            &:hover
+                background mix(bglight, borders, 65%)
+                .huge
+                    transform translate(0, -0.5rem)
+            &:first-child
+                border-radius 1rem 0 0 1rem
+            &:last-child
+                border-radius 0 1rem 1rem 0
+        .huge
+            font-size 6rem
+            line-height 8rem
+            display inline-block
+            {magic}
+            {trans}
+        .hidden
+            display none
+    .&-aCancelButton
+        position absolute
+        left 50%
+        bottom 1rem
+        transform translate(-50%, 0)

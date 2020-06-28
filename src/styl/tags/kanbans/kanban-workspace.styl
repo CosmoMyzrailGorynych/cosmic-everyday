@@ -1,0 +1,59 @@
+kanban-workspace
+    display flex
+    height 100%
+    width 100%
+    padding-top 0.5rem
+    flex-flow column nowrap
+    overflow hidden
+    background-position center center !important
+    background-size cover !important
+    position relative
+    box-sizing border-box
+    .aHorisontalWrap
+        flex 1 1 auto
+        position relative
+        box-sizing border-box
+        padding 0 2rem 2rem
+    .kanban-columns
+        position absolute
+        left 0
+        right 0
+        top 0
+        bottom 0
+        display inline-flex
+        flex-flow row nowrap
+        vertical-align top
+        padding 0 2rem
+        > .inlineblock
+            flex 0 0 15rem
+    &:before
+        position absolute
+        content ''
+        left 0
+        width 5rem
+        top 0
+        bottom 0
+        background linear-gradient(to right, rgba(bglight, 0.135) 0, transparent 100%)
+.kanban-workspace-aHeader
+    padding-left 2rem !important
+    flex 0 0 auto
+    white-space nowrap
+    text-overflow ellipsis
+    display flex
+    flex-flow row nowrap
+    align-items baseline
+    position relative
+    h1
+        color white
+        flex 1 1 auto
+    label-selector
+        margin 0 1rem 0 0.5rem
+        position relative
+        top -0.2rem
+.kanban-tone
+    position absolute
+    left 0
+    top 0
+    right 0
+    bottom 0
+    background bgcolor

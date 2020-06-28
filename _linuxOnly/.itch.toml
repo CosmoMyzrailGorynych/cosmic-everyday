@@ -1,0 +1,7 @@
+[[actions]]
+name = "forums"
+path = "https://comigo.itch.io/cosmic-everyday/community"
+
+[[actions]]
+name = "play"
+path = "CosmicEveryday"
