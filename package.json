@@ -19,7 +19,7 @@
     "gulp-uglify-es": "^0.1.11",
     "inquirer": "^3.3.0",
     "makensis": "^0.9.1",
-    "nightwatch": "^0.9.21",
+    "nightwatch": "^2.3.9",
     "node-notifier": "^4.6.1",
     "nw-builder": "^3.5.7",
     "run-sequence": "^1.2.2",
