@@ -20,7 +20,7 @@
     "inquirer": "^3.3.0",
     "makensis": "^0.9.1",
     "nightwatch": "^2.3.9",
-    "node-notifier": "^4.6.1",
+    "node-notifier": "^8.0.1",
     "nw-builder": "^3.5.7",
     "run-sequence": "^1.2.2",
     "streamqueue": "^1.1.2"
